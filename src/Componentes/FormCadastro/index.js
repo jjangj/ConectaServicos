@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components"
 import Heading1 from "../Heading1";
 import Inputs from '../Inputs';  
@@ -15,6 +16,12 @@ const AppForm = styled.div `
 `
 
 function FormCadastro(){
+  const navigate = useNavigate();
+  const handleCadastro = () => {
+    console.log("akakaka");
+    navigate("/cadastro-curriculo");
+  };
+
   return (
     <AppForm>
       <Heading1 texto="Crie sua conta"></Heading1>
@@ -24,8 +31,8 @@ function FormCadastro(){
         <Input tipo="date" label="Data de nascimento" placeholder="Digite sua data de nascimento"></Input>
         <Input tipo="email" label="E-mail" placeholder="Digite seu e-mail"></Input>
         <Input tipo="password" label="Senha" placeholder="Digite uma senha"></Input>
-        <Button texto="Cadastre-se" />
-        <LinkAlternativo texto="Já possui uma conta? " linkTexto="Entre agora"/>
+        <Button texto="Cadastre-se" onClick={handleCadastro} />
+        <LinkAlternativo texto="Já possui uma conta? " linkTexto="Entre agora" to="/login"/>
       </Inputs>
     </AppForm>
   )

@@ -4,6 +4,7 @@ import Inputs from '../Inputs';
 import Input from '../Input';
 import Button from '../Button';
 import Select from "../Select";
+import LinkAlternativo from "../LinkAlternativo";
 
 const AppForm = styled.div `
   flex: 1;
@@ -23,6 +24,7 @@ function FormCurriculo(){
         <Select label="Profissão"></Select>
         <Input tipo="number" label="Tempo de experiência" placeholder="Digite quantos anos você tem de experiência"></Input>
         <Button texto="Finalizar cadastro"/>
+        <LinkAlternativo texto="Já tem uma conta? " linkTexto="Faça login" to="/login" />
       </Inputs>
     </AppForm>
   )

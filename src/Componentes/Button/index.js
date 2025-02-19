@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const AppButton = styled.button`
-  all: unset; /* Reseta estilos padrões */
   background-color: #ff6937;
   color: white;
   padding: 12px;
@@ -14,9 +13,12 @@ const AppButton = styled.button`
   display: block;
 `;
 
-function Button({ texto }) {
-  console.log("Renderizando o botãoaaaaaaaaaiaaaiiiaaa")
-  return <AppButton>{texto}</AppButton>;
+const AppButton2 = styled.button`
+background=red;`
+
+function Button({ texto, onClick }) {
+  console.log("Renderizando botão...");
+  return <AppButton2 onClick={onClick}>{texto}</AppButton2>;
 }
 
 export default Button;

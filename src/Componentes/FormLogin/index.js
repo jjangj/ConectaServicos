@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 import Heading1 from "../Heading1";
 import Inputs from '../Inputs';  
@@ -24,7 +25,7 @@ function FormLogin(){
         <Input tipo="password" label="Senha" placeholder="Digite uma senha"></Input>
         <LinkSenha></LinkSenha>
         <Button texto="Entrar"/>
-        <LinkAlternativo texto="Ainda não possui uma conta? " linkTexto="Cadastre-se"/>
+        <LinkAlternativo texto="Ainda não possui uma conta? " linkTexto="Cadastre-se" to="/Cadastro"/>
       </Inputs>
     </AppForm>
   )
